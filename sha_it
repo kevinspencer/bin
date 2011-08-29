@@ -1,0 +1,7 @@
+#!/usr/bin/env perl
+
+use Digest::SHA qw(sha256_hex);
+use strict;
+use warnings;
+
+print sha256_hex(shift), "\n";
