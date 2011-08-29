@@ -1,0 +1,8 @@
+#!/bin/bash
+
+file=$1
+if [ -e ${file} ] 
+then
+    tempfile="${file}.tmp"
+    cat ${file} | tr -d '\r' > ${tempfile} && mv ${tempfile} ${file}
+fi
