@@ -1,0 +1,7 @@
+#!/usr/bin/env perl
+
+use Digest::MD5 qw(md5_hex);
+use strict;
+use warnings;
+
+print md5_hex(shift), "\n";
