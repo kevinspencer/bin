@@ -1,0 +1,13 @@
+#!/usr/bin/env perl
+
+use Socket;
+use strict;
+use warnings;
+
+my $ip = shift;
+
+die "Usage: gethostbyaddr ip\n" unless($ip);
+
+my $ip_address = inet_aton($ip);
+my $hostname   = gethostbyaddr($ip_address, AF_INET);
+print $hostname, "\n";
