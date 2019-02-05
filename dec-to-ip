@@ -1,0 +1,11 @@
+#!/usr/bin/env perl
+
+my $address = shift;
+
+my $d = $address % 256; $address -= $d; $address /= 256;
+my $c = $address % 256; $address -= $c; $address /= 256;
+my $b = $address % 256; $address -= $b; $address /= 256;
+my $a = $address;
+my $dotted="$a.$b.$c.$d";
+
+print $dotted, "\n";
