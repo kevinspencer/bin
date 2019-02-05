@@ -1,0 +1,4 @@
+#!/usr/bin/env perl
+
+my ($seconds, $minutes, $hours, $day_of_month, $month, $year, $wday, $yday, $isdst) = localtime(shift);
+printf("%04d/%02d/%02d - %02d:%02d:%02d\n", $year+1900, $month+1, $day_of_month, $hours, $minutes, $seconds);
