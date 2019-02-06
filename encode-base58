@@ -1,0 +1,10 @@
+#!/usr/bin/env perl
+
+use Encode::Base58;
+use strict;
+use warnings;
+
+my $untouched_numeric  = shift;
+die "Usage: encode-base58 value\n" if (! $untouched_numeric);
+my $encoded_string = encode_base58($untouched_numeric);
+print $encoded_string, "\n";
