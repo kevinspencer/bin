@@ -1,0 +1,10 @@
+#!/usr/bin/env perl
+
+use Number::Bytes::Human qw(format_bytes);
+use strict;
+use warnings;
+
+my $raw_bytes = shift;
+
+my $size = format_bytes($raw_bytes);
+print $size, "\n";
