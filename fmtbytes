@@ -6,5 +6,7 @@ use warnings;
 
 my $raw_bytes = shift;
 
+die "Usage: fmtbytes raw-bytes\n" if (! $raw_bytes);
+
 my $size = format_bytes($raw_bytes);
 print $size, "\n";
