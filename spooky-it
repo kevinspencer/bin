@@ -1,0 +1,7 @@
+#!/usr/bin/env perl
+
+use Digest::SpookyHash qw(spooky64);
+use strict;
+use warnings;
+
+print spooky64(shift, 0), "\n";
