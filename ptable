@@ -1,0 +1,14 @@
+#!/usr/bin/env perl
+
+use Data::Dumper;
+use Proc::ProcessTable;
+use strict;
+use warnings;
+
+$Data::Dumper::Indent = 1;
+
+my $procs = Proc::ProcessTable->new();
+
+for my $proc (@{$procs->table()}) {
+    print $proc->cmndline(), "\n";
+}
