@@ -1,0 +1,14 @@
+#!/usr/bin/env perl
+
+use Data::Fake qw(Dates);
+use strict;
+use warnings;
+
+my $count = shift;
+
+$count ||= 1;
+
+for (1..$count) {
+    my $code = fake_past_datetime("%Y-%m-%d");
+    print $code->(), "\n";
+}
